@@ -3,16 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Admin</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<div class="container">
-		<div class="commands">
-			<button id="showdb_btn" class="btn btn-default">Show DataBase</button>
-			<button class="btn btn-default">Show arrivals of foreigners over the past 14 days</button>
-			<button id="show_china_btn" class="btn btn-default">Show China</button>
-			<button class="btn btn-default">Show foreigners whose registration expired</button>
+	<div class="container-fluid adm_cont">
+	<h1 class="h-base">Foreigners DataBase</h1>
+		<div class="admin_menu">
+			<a id="showdb_btn" class="up_btn">Show DataBase</a>
+			<a id="last14_btn" class="up_btn">Show arrivals of foreigners over the past 14 days</a>
+			<a id="show_countries_btn" class="up_btn">Show countries</a>
+			<a id="expired_btn" class="up_btn">Show foreigners whose registration expired</a>
 		</div>
 		<table class="table table-hover">
 			<thead>
@@ -36,6 +37,7 @@
 			</ul>
 		</div>
 	</div>
+
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
