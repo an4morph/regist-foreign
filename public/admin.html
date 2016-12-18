@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="commands">
+			<button id="showdb_btn" class="btn btn-default">Show DataBase</button>
+			<button class="btn btn-default">Show arrivals of foreigners over the past 14 days</button>
+			<button id="show_china_btn" class="btn btn-default">Show China</button>
+			<button class="btn btn-default">Show foreigners whose registration expired</button>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Nationality</th>
+					<th>Arrival purpose</th>
+					<th>Arrival date</th>
+					<th>Registration duration</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+
+		<div class="show_more">
+			<span class="modal_close">X</span>
+			<ul id='more_info' class="list-unstyled">
+				
+			</ul>
+		</div>
+	</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/sripts.js"></script>
+</body>
+</html>

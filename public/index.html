@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.min.css">
+	<title>Registration for foreigners</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to Kyrgyzstan!</h1>
+		<div class="card">
+			<h2>Registration form</h1>
+				<div class="form-paper">
+					<form>
+						<div class="form-group">
+							<label for="full_name">Full name</label>
+							<input type="text" class="form-control" id="full_name">
+						</div>
+						<div class="form-group">
+							<label for="nationality">Nationality</label>
+							<input type="text" class="form-control" id="nationality">
+						</div>
+						
+						<div class="checkbox">
+							<label>
+								<input type="radio" name="gender" value="man"> Man
+								<input type="radio" name="gender" value="woman"> Woman
+							</label>
+						</div>
+						<div class="form-group">
+							<label for="arrival_purpose">Arrival purpose</label>
+							<input type="text" class="form-control" id="arrival_purpose">
+						</div>						
+						<div class="form-group">
+							<label for="arrival_date">Arrival date</label>
+							<input type="text" class="form-control" id="arrival_date">
+						</div>
+						<div class="form-group">
+							<label for="departure_date">Planned date of departure</label>
+							<input type="text" class="form-control" id="departure_date">
+						</div>
+						<label for="reg_duration">Registration duration</label>
+						<div class="input-group">							
+							<input type="text" class="form-control" id="reg_duration">
+							<div class="input-group-addon">month</div>
+						</div>
+						<a id="submit_btn" class="btn btn-success">Submit</a>
+					</form>
+				</div>
+			</div>
+			<a href="admin.html">Admin</a>
+		</div>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+		<script src="js/sripts.js"></script>
+
+	</body>
+	</html>

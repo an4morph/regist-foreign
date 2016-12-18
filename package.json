@@ -1,0 +1,17 @@
+{
+  "name": "sierratries",
+  "version": "1.0.0",
+  "description": "foreigh",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
