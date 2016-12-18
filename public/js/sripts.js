@@ -2,8 +2,6 @@ $('#arrival_date').datepicker();
 $('#departure_date').datepicker();
 
 
-
-
 ////////////////////////////////////////////////////Save info from registration form///////////////////////////////
 $('#submit_btn').on('click', function() {
 	var user = {};
@@ -23,7 +21,7 @@ $('#submit_btn').on('click', function() {
 	  dataType: 'json'
 	});
 	
-	
+	alert('Successful registration!');
 })
 
 /////////////////////////////////////////////////Show DataBase//////////////////////////////////////////////////
@@ -90,6 +88,7 @@ $('body').on('click', '.show_more_btn', function()  {
 	  },
 	  dataType: 'json'
 	});
+
 	
 })
 /////////////////////////////////////////////////////Modal Window Close//////////////////////////////////////////////
@@ -100,6 +99,7 @@ $('.modal_close').click( function(){
 					$(this).css('display', 'none'); 
 				}
 			);
+
 	});
 
 ////////////////////////////////////Show arrivals last 14 days////////////////////////////////
@@ -197,8 +197,32 @@ $('#show_countries_btn').click( function(){
 	});
 });
 
-//////////////////////////////////////////////////Menu////////////////////////////////////////////////
-$('.glyphicon-menu-hamburger').on('mouseover', function(){
 
-	$('.admin_menu').css('overflow', 'visible');
+
+////////////////////////////////////%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%////////////////////////////////////////
+$('#percent_btn').click( function(){ 
+	$.ajax({
+	  type: "GET",
+	  url: "http://localhost:3000/user",
+	  success: function(msg) {
+	  	$('tbody').html('');
+
+	  	for (var i = 0; i < msg.length; i++) {
+	  		var k=0; 
+	  		var x = msg[i].nationality;
+	  		for (var j = 0; j < msg.length; j++){
+	  			if (x==msg[j].nationality){
+	  				k++;
+	  			}
+	  		}
+	  	
+	  		var foreign = "<tr><td>" + msg[i].nationality + "</td>"
+							+ "<td>" + k + "</td>" + "</tr>";
+			$('tbody').append(foreign);	  	
+	  		
+		}
+	  },
+	  dataType: 'json'
 	});
+
+});
