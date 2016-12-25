@@ -106,3 +106,10 @@ table{
 	background-image: url(../img/bg3.png);
 	padding: 0;
 }
+
+.red-bg{
+	background-color: #ffe6e6;
+}
+.red-bg:hover{
+	background-color: #ffcccc!important;
+}

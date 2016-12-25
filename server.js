@@ -31,6 +31,15 @@ app.get('/user', function (req, res) {
 
 });
 
+//@GET2
+app.post('/user_id', function (req, res) {
+  var doc = req.body;
+  db.findOne( doc, function(err, docs) {
+    res.send(docs);
+  })
+
+});
+
 //@DELETE
 app.delete('/user', function (req, res) {
   
