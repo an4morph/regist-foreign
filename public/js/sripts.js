@@ -1,8 +1,7 @@
 $('#arrival_date').datepicker();
 $('#departure_date').datepicker();
 
-
-////////////////////////////////////////////////////Save info from registration form///////////////////////////////
+//Save info from registration form
 $('#submit_btn').on('click', function() {
 	var user = {};
 	user.fullName = $('#full_name').val();
@@ -24,7 +23,7 @@ $('#submit_btn').on('click', function() {
 	alert('Successful registration!');
 })
 
-/////////////////////////////////////////////////Show DataBase//////////////////////////////////////////////////
+//Show DataBase
 $('#showdb_btn').on('click', function() {
 	$.ajax({
 	  type: "GET",
@@ -47,8 +46,7 @@ $('#showdb_btn').on('click', function() {
 								+ "<td>" + msg[i].arrivalDate + "</td>"
 								+ "<td>" + msg[i].regDuration + " month</td>"
 								+ "<td>" + '<button class="btn btn-danger delete" data-id="'+ msg[i]._id + '">Delete</button>'
-								+ '<button class="btn btn-primary show_more_btn" data-id="' + msg[i]._id + '">Show full info</button>'
-								+ '<button class="btn btn-default fine" data-id="'+ msg[i]._id + '">Fine</button></td></tr>';
+								+ '<button class="btn btn-primary show_more_btn" data-id="' + msg[i]._id + '">Show full info</button>';
 
 				$('tbody').append(foreign);
 	  		}
@@ -71,7 +69,7 @@ $('#showdb_btn').on('click', function() {
 })
 
 
-///////////////////////////////////////////Delete from db////////////////////////////////////////////
+//Delete from db
 
 $('body').on('click', '.delete', function()  {
 
@@ -86,7 +84,7 @@ $('body').on('click', '.delete', function()  {
 	});
 })
 
-////////////////////////////////////////////////////////////////////////Show More info//////////////////////////////////////////////
+//Show More info
 $('body').on('click', '.show_more_btn', function()  {
 	// HiNeX: Use fade* methods
 	$('.show_more').fadeIn(300);
@@ -114,14 +112,15 @@ $('body').on('click', '.show_more_btn', function()  {
 
 
 })
-/////////////////////////////////////////////////////Modal Window Close//////////////////////////////////////////////
+
+//Modal Window Close
 $('.modal_close').click( function(){
 	// HiNeX: Use fade* methods
 		$('.show_more')
 			.fadeOut(300);
 	});
 
-////////////////////////////////////Show arrivals last 14 days////////////////////////////////
+//Show arrivals last 14 days
 
 $('#last14_btn').click( function(){
 
@@ -157,7 +156,9 @@ $('#last14_btn').click( function(){
 
 });
 
-/////////////////////////////////////////////Registration expired/////////////////////////////////////
+
+///Registration expired
+
 $('#expired_btn').click( function(){
 	$.ajax({
 	  type: "GET",
@@ -188,7 +189,7 @@ $('#expired_btn').click( function(){
 	});
 });
 
-////////////////////////////////////////////Show countries//////////////////////////////////////////////////////////////
+///Show countries
 $('#show_countries_btn').click( function(){
 	var country = prompt('Enter country', '');
 	$.ajax({
@@ -218,7 +219,7 @@ $('#show_countries_btn').click( function(){
 
 
 
-////////////////////////////////////%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%////////////////////////////////////////
+////%%%%%%%%
 $('#percent_btn').click( function(){
 	$.ajax({
 	  type: "GET",
@@ -243,9 +244,5 @@ $('#percent_btn').click( function(){
 	  },
 	  dataType: 'json'
 	});
-
-});
-///////////////////////////////////////////////Fine///////////////////////////////////////////////
-$('body').on('click', '.fine', function()  {
 
 });
